@@ -14,10 +14,10 @@ void myList::print_all() const
 		cout<<"List is empty"<<endl;
 		return;
 	}
-	Link* p = first;
-	while (p!=nullptr)
+	Link* p = this->first;
+	for (int i = 0; i< this->length; i++)
 	{
-		cout<<p->toString()<<endl;
+		cout<<(*p).toString()<<endl;
 		p=p->succ;
 	}
 }
@@ -25,15 +25,15 @@ void myList::print_all() const
 Link* myList::push_back(string s)
 {
 	Link newLink = Link(s);
-	Link* oldLast = last;
-	last = &newLink;
-	last->succ = nullptr;
+	Link* oldLast = this->last;
+	this->last = &newLink;
+	this->last->succ = nullptr;
 	if (is_empty()) 
 		{
-			first=last;
-			last->prev=nullptr;
+			this->first=this->last;
+			this->last->prev=nullptr;
 		}
-	else last->prev=oldLast;
+	else this->last->prev=oldLast;
 	
 	length++;
 	return last;

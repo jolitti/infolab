@@ -7,6 +7,7 @@ using namespace std;
 int main()
 {
 	myList l = myList();
+	l.print_all();
 	l.push_back("a");
 	l.push_back("b");
 	l.push_back("c");

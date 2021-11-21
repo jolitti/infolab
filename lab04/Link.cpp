@@ -2,7 +2,7 @@
 #include <string>
 using namespace std;
 
-Link::Link(const string& v,Link* p,Link* s)
+Link::Link(string v,Link* p,Link* s)
 	: value {v},prev{p},succ{s} {}
 	
 string Link::toString()
