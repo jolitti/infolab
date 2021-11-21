@@ -14,9 +14,11 @@ void myList::print_all() const
 		cout<<"List is empty"<<endl;
 		return;
 	}
+	cout<<"List has "<<length<<" elements"<<endl;
 	Link* p = this->first;
-	for (int i = 0; i< this->length; i++)
+	for (int i = 0; i< length; i++)
 	{
+		cout<<"Content of link n. "<<i<<endl;
 		cout<<(*p).toString()<<endl;
 		p=p->succ;
 	}
@@ -26,8 +28,8 @@ Link* myList::push_back(string s)
 {
 	Link newLink = Link(s);
 	Link* oldLast = this->last;
-	this->last = &newLink;
-	this->last->succ = nullptr;
+	last = &newLink;
+	last->succ = nullptr;
 	if (is_empty()) 
 		{
 			this->first=this->last;

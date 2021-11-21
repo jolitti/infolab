@@ -9,7 +9,7 @@ private:
 	Link* succ;
 	friend class myList;
 public:
-	Link(std::string v,Link* p=nullptr,Link* s = nullptr);
+	explicit Link(std::string v,Link* p=nullptr,Link* s = nullptr);
 	
 	std::string toString();
 };
