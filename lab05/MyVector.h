@@ -8,7 +8,9 @@ class MyVector
 private:
     int size;
     int arrayLength;
-    double* elements;
+    T* elements;
+
+    void double_array();
 
 public:
     MyVector(int initialBuffer = 1);
@@ -19,7 +21,7 @@ public:
     //T at(int pos) const;
 
     void push_back(T& newElem);
-    //T& pop_back();
+    T& pop_back();
 
     //int reserve(int newBuffLength); 
 
