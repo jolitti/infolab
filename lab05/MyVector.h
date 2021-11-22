@@ -10,6 +10,7 @@ private:
     int arrayLength;
     T* elements;
 
+    void resize_array(int newLen);
     void double_array();
 
 public:
@@ -23,9 +24,9 @@ public:
     void push_back(T& newElem);
     T& pop_back();
 
-    //int reserve(int newBuffLength); 
+    int reserve(int newBuffLength); 
 
-
+    ~MyVector();
 };
 #include "MyVector.hpp"
 
