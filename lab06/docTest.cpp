@@ -10,6 +10,7 @@ int main()
 
     cout << d;
     cout << d.size() << endl;
+    d.add_line("Besugo 2000");
 
     d.close();
 }
